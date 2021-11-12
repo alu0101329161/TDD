@@ -243,6 +243,33 @@
 	4 examples, 0 failures
 
 
+- [X] 15. Septima prueba
+	/# En spec/matrix_spec.rb
+	it "Se espera hacer producto por un escalar" do
+	  expect((Matrix.new([[0,3],[0,3]]) * 2).to_s).to eq("[[0, 6], [0, 6]]")
+	  expect((Matrix.new([[1,1],[1,1]]) * 3).to_s).to eq("[[3, 3], [3, 3]]")
+	  expect((Matrix.new([[2,2],[2,2]]) * 5).to_s).to eq("[[10, 10], [10, 10]]")
+	rspec spec/matrix_spec.rb
+	....F
+
+	Failures:
+
+       1) Matrix Se debe poder hacer el producto por un producto escalar 
+       Failure/Error: expect((Matrix.new([[0,3],[0,3]]) * 2).to_s).to eq("[[0, 6], [0, 6]]")
+     
+       NoMethodError:
+       undefined method `*' for #<Matrix:0x0000563c5242f6c8 @x=[[0, 3], [0, 3]]>
+       # ./spec/matrix_spec.rb:29:in `block (2 levels) in <top (required)>'
+
+	Finished in 0.00615 seconds (files took 0.41587 seconds to load)
+	5 examples, 1 failure
+
+	Failed examples:
+
+	rspec ./spec/matrix_spec.rb:28 # Matrix Se debe poder hacer el producto por un producto escalar 
+
+	rake aborted!
+
 
 ## Autor
 * [Joseph Gabino Rodríguez](https://github.com/alu0101329161)
