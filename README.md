@@ -233,6 +233,16 @@
 
 	rake aborted!
 
+- [X] 14. Se arreglo fallo que produce sexta prueba
+	/# En /lib/matrix.rb se implementa metodo suma
+
+	rspec spec/matrix_spec.rb
+	....
+
+	Finished in 0.00628 seconds (files took 0.3903 seconds to load)
+	4 examples, 0 failures
+
+
 
 ## Autor
 * [Joseph Gabino Rodríguez](https://github.com/alu0101329161)
