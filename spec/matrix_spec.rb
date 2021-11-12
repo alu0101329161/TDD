@@ -18,4 +18,11 @@ describe Matrix do
           expect(Matrix.new([[0,1],[0,1]]).to_s).to eq("[[0, 1], [0, 1]]")
 	  expect(Matrix.new([[2,3],[2,4]]).to_s).to eq("[[2, 3], [2, 4]]")	
         end
+
+	it "Se debe poder sumar matrices " do
+          expect(Matrix.new([[0,3],[0,3]]) + Matrix.new([[0,1],[0,1]]).to_s).to eq("[[0, 4], [0, 4]]")
+	  expect(Matrix.new([[1,1],[1,1]]) + Matrix.new([[1,1],[1,1]]).to_s).to eq("[[2, 2], [2, 2]]")
+	  expect(Matrix.new([[2,2],[2,2]]) + Matrix.new([[2,2],[2,2]]).to_s).to eq("[[4, 4], [4, 4]]")
+        end
+
 end
