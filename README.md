@@ -203,6 +203,36 @@
 	3 examples, 0 failures
 
 
+- [X] 13. Sexta prueba
+	
+	/# En /spec/matrix_spec.rb
+	it "Se espera que se puedan sumar dos matrices"
+	  expect(Matrix.new([[0,3],[0,3]]) + Matrix.new([[0,1],[0,1]]).to_s).to eq("[[0, 4], [0, 4]]")
+	  expect(Matrix.new([[1,1],[1,1]]) + Matrix.new([[1,1],[1,1]]).to_s).to eq("[[2, 2], [2, 2]]")
+	  expect(Matrix.new([[2,2],[2,2]]) + Matrix.new([[2,2],[2,2]]).to_s).to eq("[[4, 4], [4, 4]]")
+	end
+
+	rspec spec/matrix_spec.rb
+	...F
+
+	Failures:
+
+       1) Matrix Se debe poder sumar matrices 
+       Failure/Error: expect(Matrix.new([[0,3],[0,3]]) + Matrix.new([[0,1],[0,1]]).to_s).to eq("[[0, 4], [0, 4]]")
+     
+       NoMethodError:
+       undefined method `+' for #<Matrix:0x000056040fd87bd8 @x=[[0, 3], [0, 3]]>
+       # ./spec/matrix_spec.rb:23:in `block (2 levels) in <top (required)>'
+
+	Finished in 0.00573 seconds (files took 0.4 seconds to load)
+	4 examples, 1 failure
+
+	Failed examples:
+
+	rspec ./spec/matrix_spec.rb:22 # Matrix Se debe poder sumar matrices 
+
+	rake aborted!
+
 
 ## Autor
 * [Joseph Gabino Rodríguez](https://github.com/alu0101329161)
