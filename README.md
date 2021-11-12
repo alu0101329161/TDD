@@ -70,6 +70,14 @@
 
 		
 
+- [X] 6. Se arregla fallo que produce la segunda prueba
+
+	rspec spec/matrix_spec.rb
+	No examples found.
+
+
+	Finished in 0.00036 seconds (files took 0.15038 seconds to load)
+	0 examples, 0 failures
 
 
 
