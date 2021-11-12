@@ -117,5 +117,33 @@
 	1 example, 0 failures
 
 
+
+- [X] 9. Cuarta prueba
+
+	En /# spec/matrix_spec.rb
+	it "Se debe poder acceder a los elementos de la matrix"
+	  expect(Matrix.new([[0,3],[0,3]])[0,0]).to eq(0)
+	  expect(Matrix.new([[0,3],[0,3]])[0,1]).to eq(3)
+	end
+
+        .F
+
+        Failures:
+
+        1) Matrix Se debe poder acceder a los elementos de la matrix 
+        Failure/Error: expect(Matrix.new([[0,3],[0,3]])[0,0]).to eq(0)
+     
+        NoMethodError:
+        undefined method `[]' for #<Matrix:0x0000564d1b1d1118 @x=[[0, 3], [0, 3]]>
+        # ./spec/matrix_spec.rb:12:in `block (2 levels) in <top (required)>'
+
+	Finished in 0.00598 seconds (files took 0.15262 seconds to load)
+	2 examples, 1 failure
+
+	Failed examples:
+
+	rspec ./spec/matrix_spec.rb:11 # Matrix Se debe poder acceder a los elementos de la matrix 
+
+
 ## Autor
 * [Joseph Gabino Rodríguez](https://github.com/alu0101329161)
