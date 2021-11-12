@@ -31,4 +31,11 @@ describe Matrix do
 	  expect((Matrix.new([[2,2],[2,2]]) * 5).to_s).to eq("[[10, 10], [10, 10]]")
         end
 
+	 it "Se debe poder hacer la traspuesta de una matrix " do
+          expect((Matrix.new([[0,3],[0,3]]).traspuesta).to_s).to eq("[[0, 0], [3, 3]]")
+          expect((Matrix.new([[1,1],[1,1]]).traspuesta).to_s).to eq("[[1, 1], [1, 1]]")
+          expect((Matrix.new([[2,5],[5,2]]).traspuesta).to_s).to eq("[[2, 5], [5, 2]]")
+        end
+
+
 end
