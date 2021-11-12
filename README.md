@@ -31,7 +31,16 @@
         '
 
 
+- [X] 4. Se arregla el fallo que produce la primera prueba
 
+	rspec spec/matrix_spec.rb
+	No examples found.
+
+
+	Finished in 0.00052 seconds (files took 0.15405 seconds to load)
+	0 examples, 0 failures
+
+	
 
 
 
