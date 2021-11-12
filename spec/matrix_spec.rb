@@ -33,7 +33,7 @@ describe Matrix do
 
 	 it "Se debe poder hacer la traspuesta de una matrix " do
           expect((Matrix.new([[0,3],[0,3]]).traspuesta).to_s).to eq("[[0, 0], [3, 3]]")
-          expect((Matrix.new([[1,1],[1,1]]).traspuesta).to_s).to eq("[[1, 1], [1, 1]]")
+          expect((Matrix.new([[7,5],[2,9]]).traspuesta).to_s).to eq("[[7, 2], [5, 9]]")
           expect((Matrix.new([[2,5],[5,2]]).traspuesta).to_s).to eq("[[2, 5], [5, 2]]")
         end
 

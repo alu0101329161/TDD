@@ -45,6 +45,23 @@ class Matrix
 
           c
         end
+	# Metodo que hace la traspuesta
+	def traspuesta
+	  c = Matrix.new
+          row = @x.length
+
+            for x in 0...row do
+             col = @x[x].length
+             new_vector = []
+
+              for y in 0...col
+		new_vector.push(@x[y][x])
+	      end
+	    c.push(new_vector)
+            end
+
+          c
+        end		
 	# Impirmir 
 	def to_s
 	  "#{@x}"
