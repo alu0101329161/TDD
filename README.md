@@ -271,5 +271,16 @@
 	rake aborted!
 
 
+- [X] 16. Se arreglo fallo que produce la septima prueba
+	/# En /lib/matrix.rb
+	Se ha implementado metodo *
+
+	rspec spec/matrix_spec.rb
+	.....
+
+	Finished in 0.00627 seconds (files took 0.40743 seconds to load)
+	5 examples, 0 failures
+ 
+
 ## Autor
 * [Joseph Gabino Rodríguez](https://github.com/alu0101329161)
