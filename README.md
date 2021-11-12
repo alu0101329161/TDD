@@ -5,6 +5,8 @@
 - [x] 2. Ejecutar rspec --init (se crean el fichero .rspec, el directorio spec/ y el fichero spec/spec\_helper.rb)
 
 - [x] 3. Primera prueba
+	/# En spec/matrix_spec.rb
+	require 'matriz'
 
         An error occurred while loading ./spec/matrix_spec.rb. - Did you mean?
                     rspec ./spec/spec_helper.rb
@@ -20,18 +22,11 @@
         0 examples, 0 failures, 1 error occurred outside of examples
 
         rake aborted!
-        '
-        Command failed with status (1): [rspec spec/matrix_spec.rb --format doc...]
-        /home/usuario/LPP/tdd/Rakefile:10:in `block in <top (required)>'
-        /home/usuario/.rvm/gems/ruby-2.7.2/gems/rake-13.0.6/exe/rake:27:in `<top (required)>'
-        /home/usuario/.rvm/gems/ruby-2.7.2/bin/ruby_executable_hooks:22:in `eval'
-        /home/usuario/.rvm/gems/ruby-2.7.2/bin/ruby_executable_hooks:22:in `<main>'
-        Tasks: TOP => doc
-        (See full trace by running task with --trace)
-        '
 
 
 - [X] 4. Se arregla el fallo que produce la primera prueba
+	/# En /lib
+	nano matrix.rb
 
 	rspec spec/matrix_spec.rb
 	No examples found.
@@ -42,14 +37,16 @@
 
 
 - [X] 5. Segunda prueba
+	/# En spec/matriz.rb
 	
 	rspec spec/matrix_spec.rb
 
 	An error occurred while loading ./spec/matrix_spec.rb.
 	Failure/Error:
-  	describe Matrix do
-  	end
-
+	'''
+        describe Matrix do
+        end
+	'
 	NameError:
 	uninitialized constant Matrix
 	# ./spec/matrix_spec.rb:3:in `<top (required)>'
@@ -60,17 +57,14 @@
 	0 examples, 0 failures, 1 error occurred outside of examples
 
 	rake aborted!
-	Command failed with status (1): [rspec spec/matrix_spec.rb...]
-	/home/usuario/LPP/tdd/Rakefile:5:in `block in <top (required)>'
-	/home/usuario/.rvm/gems/ruby-2.7.2/gems/rake-13.0.6/exe/rake:27:in `<top (required)>'
-	/home/usuario/.rvm/gems/ruby-2.7.2/bin/ruby_executable_hooks:22:in `eval'
-	/home/usuario/.rvm/gems/ruby-2.7.2/bin/ruby_executable_hooks:22:in `<main>'
-	Tasks: TOP => default => noformat
-	(See full trace by running task with --trace)
 
-		
 
 - [X] 6. Se arregla fallo que produce la segunda prueba
+
+	/# En lib/matrix.rb
+
+	class Matrix
+	end
 
 	rspec spec/matrix_spec.rb
 	No examples found.
@@ -80,7 +74,12 @@
 	0 examples, 0 failures
 
 
-- [X] 7. Tercera prueba 
+- [X] 7. Tercera prueba
+
+	/# En spec/matrix_spec.rb
+	it "Intanciar objeto matriz" do
+	  expect(Matrix.new([0,3],[0,3])).not_to_eq(nil) 
+	end
 
 	rspec spec/matrix_spec.rb
         F
@@ -103,6 +102,19 @@
 
 	rspec ./spec/matrix_spec.rb:5 # Matrix Se instancia un objeto matrix
 
+
+- [X] 8. Se arreglo fallo que produce tercera prueba
+
+	/# En lib/matrix.rb
+	def initialize(x)
+	  @x = x
+	end
+
+	rspec spec/matrix_spec.rb
+	.
+
+	Finished in 0.00533 seconds (files took 0.14242 seconds to load)
+	1 example, 0 failures
 
 
 ## Autor
