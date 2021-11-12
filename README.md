@@ -80,6 +80,29 @@
 	0 examples, 0 failures
 
 
+- [X] 7. Tercera prueba 
+
+	rspec spec/matrix_spec.rb
+        F
+
+        Failures:
+
+        1) Matrix Se instancia un objeto matrix
+        Failure/Error: expect(Matrix.new([0,3],[0,3])).not_to_eq(nil)
+     
+        ArgumentError:
+        wrong number of arguments (given 2, expected 0)
+        # ./spec/matrix_spec.rb:7:in `initialize'
+        # ./spec/matrix_spec.rb:7:in `new'
+        # ./spec/matrix_spec.rb:7:in `block (2 levels) in <top (required)>'
+
+	Finished in 0.00467 seconds (files took 0.13897 seconds to load)
+	1 example, 1 failure
+
+	Failed examples:
+
+	rspec ./spec/matrix_spec.rb:5 # Matrix Se instancia un objeto matrix
+
 
 
 ## Autor
