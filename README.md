@@ -282,5 +282,32 @@
 	5 examples, 0 failures
  
 
+- [X] 17. Octava prueba
+	/# En /spec/matrix_spec.rb
+	it " Se espera poder hacer la traspuesta de una matrix" do
+	  expect((Matrix.new([[0,3],[0,3]]).traspuesta).to_s).to eq("[[0, 0], [3, 3]]")
+	  expect((Matrix.new([[1,1],[1,1]]).traspuesta).to_s).to eq("[[1, 1], [1, 1]]")
+	  expect((Matrix.new([[5,2],[5,2]]).traspuesta).to_s).to eq("[[5, 2], [5, 2]]")
+	rspec spec/matrix_spec.rb
+
+        .....F
+
+        Failures:
+
+        1) Matrix Se debe poder hacer la traspuesta de una matrix 
+        Failure/Error: expect((Matrix.new([[0,3],[0,3]]).traspuesta).to_s).to eq("[[0, 0], [3, 3]]")
+     
+        NoMethodError:
+        undefined method `traspuesta' for #<Matrix:0x0000555a407394a8 @x=[[0, 3], [0, 3]]>
+        # ./spec/matrix_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+	Finished in 0.00695 seconds (files took 0.41897 seconds to load)
+	6 examples, 1 failure
+
+	Failed examples:
+
+	rspec ./spec/matrix_spec.rb:34 # Matrix Se debe poder hacer la traspuesta de una matrix 
+
+	rake aborted!
 ## Autor
 * [Joseph Gabino Rodríguez](https://github.com/alu0101329161)
