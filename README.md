@@ -309,5 +309,14 @@
 	rspec ./spec/matrix_spec.rb:34 # Matrix Se debe poder hacer la traspuesta de una matrix 
 
 	rake aborted!
+
+- [x] 18. Se arreglo fallo que produce la prueba
+	/# Se ha implementado en /lib/matrix.rb se ha implementado metodo traspuesta
+
+	......
+
+	Finished in 0.00635 seconds (files took 0.4123 seconds to load)
+	6 examples, 0 failures
+
 ## Autor
 * [Joseph Gabino Rodríguez](https://github.com/alu0101329161)
