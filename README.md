@@ -159,6 +159,36 @@
 	2 examples, 0 failures
 
 
+- [X] 11. Quinta prueba
+	
+	/# En spec/matrix_spec.rb
+	it"Imprimir matrix"
+	  expect(Matrix.new([[0,3],[0,3]]).to_s).to eq("[[0,3][0,3]]")
+	  expect(Matrix.new([[0,1],[0,1]]).to_s).to eq("[[0,1][0,1]]")
+	  expect(Matrix.new([[2,3],[2,3]]).to_s).to eq("[[2,3][2,3]]")
+	end
+		
+	rspec spec/matrix_spec.rb
+	..F
+	Failures:
+
+       1) Matrix Se debe poder mostrar la matrix 
+       Failure/Error: expect(Matrix.new([[0,3],[0,3]]).to_s).to eq("[[0,3][0,3]]")
+     
+       expected: "[[0,3][0,3]]"
+            got: "#<Matrix:0x000055e1a347a560>"
+     
+       (compared using ==)
+       # ./spec/matrix_spec.rb:17:in `block (2 levels) in <top (required)>'
+
+	Finished in 0.01874 seconds (files took 0.37826 seconds to load)
+	3 examples, 1 failure
+
+	Failed examples:
+
+	rspec ./spec/matrix_spec.rb:16 # Matrix Se debe poder mostrar la matrix 
+
+
 
 ## Autor
 * [Joseph Gabino Rodríguez](https://github.com/alu0101329161)
