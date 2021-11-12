@@ -8,4 +8,9 @@ describe Matrix do
 	
 	end
 
+	 it "Se debe poder acceder a los elementos de la matrix " do
+    	   expect(Matrix.new([[0,3],[0,3]])[0,0]).to eq(0)
+	   expect(Matrix.new([[0,3],[0,3]])[0,1]).to eq(3) 
+  	end
+
 end
