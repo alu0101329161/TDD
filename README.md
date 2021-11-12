@@ -145,7 +145,7 @@
 	rspec ./spec/matrix_spec.rb:11 # Matrix Se debe poder acceder a los elementos de la matrix 
 
 
-- [X] 10. Se arreglo fallo que produce tercera prueba
+- [X] 10. Se arreglo fallo que produce cuarta prueba
 
 	/# En lib/matrix.rb
 	def [](x,y)
@@ -187,6 +187,20 @@
 	Failed examples:
 
 	rspec ./spec/matrix_spec.rb:16 # Matrix Se debe poder mostrar la matrix 
+
+
+- [X] 12. Se arreglo fallo que produce quinta prueba
+	
+	/# En /lib/matrix.txt
+	def to_s
+	  "#{@x]"
+	end
+
+	rspec spec/matrix_spec.rb
+	...
+
+	Finished in 0.00552 seconds (files took 0.37585 seconds to load)
+	3 examples, 0 failures
 
 
 
