@@ -145,5 +145,20 @@
 	rspec ./spec/matrix_spec.rb:11 # Matrix Se debe poder acceder a los elementos de la matrix 
 
 
+- [X] 10. Se arreglo fallo que produce tercera prueba
+
+	/# En lib/matrix.rb
+	def [](x,y)
+	  @x[x][y]
+	end
+
+	rspec spec/matrix_spec.rb
+	..
+
+	Finished in 0.00591 seconds (files took 0.15419 seconds to load)
+	2 examples, 0 failures
+
+
+
 ## Autor
 * [Joseph Gabino Rodríguez](https://github.com/alu0101329161)
